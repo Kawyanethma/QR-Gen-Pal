@@ -1,0 +1,125 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Basic PrimeNG-style classes */
+.p-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  gap: 0.5rem;
+}
+
+.p-button-primary {
+  background: #007ad9;
+  color: white;
+}
+
+.p-button-primary:hover {
+  background: #026ab7;
+}
+
+.p-button-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.p-button-secondary:hover {
+  background: #5a6268;
+}
+
+.p-button-success {
+  background: #28a745;
+  color: white;
+}
+
+.p-button-success:hover {
+  background: #218838;
+}
+
+.p-button-outlined {
+  background: transparent;
+  border: 2px solid;
+}
+
+.p-button-outlined.p-button-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.p-button-outlined.p-button-secondary:hover {
+  background: #6c757d;
+  color: white;
+}
+
+.p-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.p-card {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+.p-card-header {
+  padding: 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 6px 6px 0 0;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.p-card-body {
+  padding: 1rem;
+}
+
+.p-inputtextarea {
+  font-family: inherit;
+  font-size: 1rem;
+  color: #495057;
+  background: #fff;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+  width: 100%;
+  resize: vertical;
+}
+
+.p-inputtextarea:focus {
+  outline: 0;
+  border-color: #007ad9;
+  box-shadow: 0 0 0 0.2rem rgba(0, 122, 217, 0.25);
+}
+
+.p-divider-vertical {
+  width: 2px;
+  background: #dee2e6;
+  margin: 0 1rem;
+}
+
+.p-tooltip {
+  position: absolute;
+  background: #343a40;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  z-index: 1000;
+}

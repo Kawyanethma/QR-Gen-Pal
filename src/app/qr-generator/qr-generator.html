@@ -1,0 +1,82 @@
+<div class="qr-generator-container">
+  <p-card header="QR Code Generator" class="generator-card">
+    <div class="content-layout">
+      <!-- Input Section -->
+      <div class="input-section">
+        <div class="form-group">
+          <label for="inputText" class="form-label">
+            <i class="pi pi-edit"></i>
+            Text or URL to encode
+          </label>
+          <textarea
+            id="inputText"
+            pTextarea
+            [(ngModel)]="inputText"
+            [placeholder]="placeholder()"
+            rows="6"
+            class="input-textarea"
+            pTooltip="Enter any text, URL, or data you want to encode as a QR code"
+            tooltipPosition="top">
+          </textarea>
+        </div>
+
+        <div class="button-group">
+          <p-button
+            label="Generate QR Code"
+            icon="pi pi-qrcode"
+            (onClick)="generateQRCode()"
+            [disabled]="!inputText().trim() || isGenerating()"
+            [loading]="isGenerating()"
+            severity="primary"
+            size="large">
+          </p-button>
+          
+          <p-button
+            label="Clear"
+            icon="pi pi-times"
+            (onClick)="clearForm()"
+            severity="secondary"
+            [outlined]="true"
+            size="large">
+          </p-button>
+        </div>
+      </div>
+
+      <p-divider layout="vertical" class="section-divider"></p-divider>
+
+      <!-- QR Code Display Section -->
+      <div class="qr-section">
+        <div class="qr-display-area">
+          @if (qrCodeDataUrl()) {
+            <div class="qr-result">
+              <h3 class="result-title">
+                <i class="pi pi-check-circle success-icon"></i>
+                Generated QR Code
+              </h3>
+              
+              <div class="qr-image-container">
+                <img [src]="qrCodeDataUrl()" alt="Generated QR Code" class="qr-image">
+              </div>
+              
+              <div class="download-section">
+                <p-button
+                  label="Download PNG"
+                  icon="pi pi-download"
+                  (onClick)="downloadQRCode()"
+                  severity="success"
+                  size="large">
+                </p-button>
+              </div>
+            </div>
+          } @else {
+            <div class="qr-placeholder">
+              <i class="pi pi-qrcode placeholder-icon"></i>
+              <h3>QR Code Preview</h3>
+              <p>Enter text or URL and click "Generate QR Code" to see the result here.</p>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </p-card>
+</div>
