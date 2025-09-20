@@ -1,12 +1,11 @@
-.toggleBtn {
-  border-radius: 30px;
+.blueSkyBtn {
   margin: 0;
 }
 
-:host .toggleBtn:hover {
+:host .blueSkyBtn:hover {
   background-color: #98d88548 !important;
 }
 
-:host-context(.dark) .toggleBtn:hover {
+:host-context(.dark) .blueSkyBtn:hover {
   background-color: #4a753e23 !important;
 }

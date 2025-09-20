@@ -1,20 +1,46 @@
-/* light mode header styles */
+/* Base header styles */
 :host header {
   margin: 0 auto;
-  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-    padding: 4px 15px;
-  /* From https://css.glass */
-background: rgba(255, 255, 255, 0.14);
-border-radius: 12px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(11.9px);
--webkit-backdrop-filter: blur(11.9px);
+  padding: 5px 20px;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 25px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.9px);
+  -webkit-backdrop-filter: blur(11.9px);
 }
 
-/* dark mode header styles */
+/* Dark mode styles */
 :host-context(.dark) header {
-background: rgba(105, 105, 105, 0.14);
+  background: rgba(105, 105, 105, 0.14);
+}
+
+.headerButtons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  :host header {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  :host header {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  :host header {
+    width: 50%;
+  }
 }

@@ -1,0 +1,10 @@
+@if (!loadingRouteConfig()) {
+<main>
+  <app-header />
+  <router-outlet />
+</main>
+} @else {
+<div class="loading-spinner">
+  <p-progress-spinner ariaLabel="loading" />
+</div>
+}

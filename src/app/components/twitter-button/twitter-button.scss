@@ -1,12 +1,11 @@
-.toggleBtn {
-  border-radius: 30px;
+.twitterBtn {
   margin: 0;
 }
 
-:host .toggleBtn:hover {
+:host .twitterBtn:hover {
   background-color: #98d88548 !important;
 }
 
-:host-context(.dark) .toggleBtn:hover {
+:host-context(.dark) .twitterBtn:hover {
   background-color: #4a753e23 !important;
 }
