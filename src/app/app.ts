@@ -1,17 +1,21 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { RouteConfigLoadEnd, RouteConfigLoadStart, Router, RouterOutlet } from '@angular/router';
+import {
+  RouteConfigLoadEnd,
+  RouteConfigLoadStart,
+  Router,
+  RouterOutlet,
+} from '@angular/router';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
-import { Header } from './components/header/header';
+import { Header } from '@layout/header/header';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Header, ProgressSpinnerModule],
   templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  styleUrls: ['./app.scss'],
 })
 export class App implements OnInit {
-  protected title = 'qr-pal';
   protected readonly loadingRouteConfig = signal(false);
 
   constructor(private router: Router) {}
