@@ -1,0 +1,24 @@
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+:host .loading-text {
+  font-family: "Bitcount Grid Double", system-ui;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: var(--p-green-600);
+}
+
+:host-context(.dark) loading-text {
+  color: var(--p-green-800);
+}
+
+:host ::ng-deep .p-progressspinner-circle {
+  stroke: var(--p-green-600) !important; 
+}
+

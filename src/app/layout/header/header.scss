@@ -4,7 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 20px;
+  padding: 5px;
+  padding-left: 22px;
+  padding-right: 15px;
   width: 40%;
   background: rgba(255, 255, 255, 0.14);
   border-radius: 25px;
@@ -24,7 +26,11 @@
   align-items: center;
 }
 
-
+.socialButtons {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+}
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {

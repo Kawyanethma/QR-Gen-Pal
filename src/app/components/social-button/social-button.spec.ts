@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BlueskyButton } from './bluesky-button';
+import { SocialButton } from './social-button';
 
-describe('BlueskyButton', () => {
-  let component: BlueskyButton;
-  let fixture: ComponentFixture<BlueskyButton>;
+describe('SocialButton', () => {
+  let component: SocialButton;
+  let fixture: ComponentFixture<SocialButton>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BlueskyButton]
+      imports: [SocialButton]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BlueskyButton);
+    fixture = TestBed.createComponent(SocialButton);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

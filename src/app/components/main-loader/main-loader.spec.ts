@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TwitterButton } from './twitter-button';
+import { MainLoader } from './main-loader';
 
-describe('TwitterButton', () => {
-  let component: TwitterButton;
-  let fixture: ComponentFixture<TwitterButton>;
+describe('MainLoader', () => {
+  let component: MainLoader;
+  let fixture: ComponentFixture<MainLoader>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TwitterButton]
+      imports: [MainLoader]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TwitterButton);
+    fixture = TestBed.createComponent(MainLoader);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

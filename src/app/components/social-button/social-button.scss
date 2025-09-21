@@ -1,11 +1,11 @@
-.twitterBtn {
+.social-button {
   margin: 0;
 }
 
-:host .twitterBtn:hover {
+:host .social-button:hover {
   background-color: #98d88548 !important;
 }
 
-:host-context(.dark) .twitterBtn:hover {
+:host-context(.dark) .social-button:hover {
   background-color: #4a753e23 !important;
 }

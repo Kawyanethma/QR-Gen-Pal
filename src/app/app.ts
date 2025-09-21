@@ -8,10 +8,12 @@ import {
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 import { Header } from '@layout/header/header';
+import { Footer } from '@layout/footer/footer';
+import { MainLoader } from '@components/main-loader/main-loader';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, ProgressSpinnerModule],
+  imports: [RouterOutlet, Header, ProgressSpinnerModule, MainLoader, Footer],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })

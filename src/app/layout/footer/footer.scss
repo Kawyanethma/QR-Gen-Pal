@@ -1,0 +1,21 @@
+:host footer {
+  margin-top: 20px;
+  color:  var(--p-green-600);
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 500;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  a:active,
+  a:visited {
+    text-decoration: none;
+  }
+}
+
+:host-context(.dark) footer {
+  color: var(--p-green-800);
+}

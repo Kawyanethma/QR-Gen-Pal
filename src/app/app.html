@@ -2,9 +2,8 @@
 <main>
   <app-header />
   <router-outlet />
+  <app-footer />
 </main>
 } @else {
-<div class="loading-spinner">
-  <p-progress-spinner ariaLabel="loading" />
-</div>
+<app-main-loader />
 }
