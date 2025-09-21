@@ -7,11 +7,15 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/home/home').then((m) => m.Home),
   },
 
+  {
+    path: 'app',
+    loadComponent: () =>
+      import('./pages/qr-generator/qr-generator').then((m) => m.QrGenerator),
+  },
 
   {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
-
-  }
+  },
 ];

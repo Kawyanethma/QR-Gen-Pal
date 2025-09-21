@@ -1,7 +1,10 @@
 <button
-  class="githubButton"
   pButton
+  [class]="'githubBtn ' + (star() ? 'hero' : '')"
+  (click)="openGitHub()"
   type="button"
-  icon="pi pi-github"
-  label="Star on GitHub"
+  [icon]="star() ? 'fa-solid fa-star' : 'pi pi-github'"
+  [label]="star() ? 'Give a Star' : 'Star on GitHub'"
+  [outlined]="star()"
+  [rounded]="true"
 ></button>

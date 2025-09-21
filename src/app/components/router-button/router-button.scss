@@ -1,0 +1,26 @@
+.routerBtn {
+  font-size: small;
+  margin: 0;
+  padding-left: 16px;
+  color: var(--p-green-800);
+  background-color: var(--p-green-200);
+  border: var(--p-green-200) solid 1px;
+
+  :host-context(.dark) & {
+    background-color: var(--p-green-950);
+    border: var(--p-green-950) solid 1px;
+    color: var(--p-green-100);
+  }
+}
+
+.routerBtn:hover {
+  color: var(--p-green-800);
+  background-color: var(--p-green-300);
+  border: var(--p-green-300) solid 1px;
+
+  :host-context(.dark) & {
+    background-color: var(--p-green-900);
+    border: var(--p-green-900) solid 1px;
+    color: var(--p-green-100);
+  }
+}
