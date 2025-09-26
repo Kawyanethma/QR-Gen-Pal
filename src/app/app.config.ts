@@ -9,7 +9,7 @@ import { routes } from './app.routes';
 
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import ColorPreset from './colorPreset';
+import ColorPreset from './theme.config';
 
 export const appConfig: ApplicationConfig = {
   providers: [

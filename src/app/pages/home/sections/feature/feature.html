@@ -1,0 +1,9 @@
+<om-fade direction="up" [transitionDuration]="transitionDuration()" [animateOnlyOnce]="true">
+  <p-card class="feature-card">
+    <ng-template pTemplate="header">
+      <i class="{{icon()}}" [style]="{ color: color() }"></i>
+    </ng-template>
+    <ng-template pTemplate="title">{{title()}}</ng-template>
+    <ng-template pTemplate="subtitle">{{description()}}</ng-template>
+  </p-card>
+</om-fade>

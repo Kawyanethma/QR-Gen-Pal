@@ -1,0 +1,34 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:host .logo-text-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bitcount Grid Double", system-ui;
+
+  color: var(--p-green-600);
+  .logo-text {
+    font-size: 2rem;
+  }
+  .logo-subtext {
+    font-size: 0.75rem;
+    line-height: 1;
+  }
+}
+
+:host-context(.dark) .logo-text-container {
+  color: var(--p-green-800);
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 4px;
+}

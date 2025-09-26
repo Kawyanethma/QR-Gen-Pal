@@ -1,0 +1,12 @@
+@if (!loadingRouteConfig()) {
+<main>
+  <om-fade [animateOnlyOnce]="true">
+    <app-header />
+    <router-outlet />
+    <app-footer />
+  </om-fade>
+  >
+</main>
+} @else {
+<app-main-loader />
+}

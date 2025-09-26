@@ -1,12 +1,11 @@
-.toggleBtn {
-  border-radius: 30px;
+.social-button {
   margin: 0;
 }
 
-:host .toggleBtn:hover {
+:host .social-button:hover {
   background-color: #98d88548 !important;
 }
 
-:host-context(.dark) .toggleBtn:hover {
+:host-context(.dark) .social-button:hover {
   background-color: #4a753e23 !important;
 }

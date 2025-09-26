@@ -1,0 +1,33 @@
+.githubBtn {
+  font-size: small;
+  margin: 0;
+  padding: 8px 14px;
+
+  &.hero {
+    border-color: var(--p-green-500);
+  }
+
+  &.hero:hover {
+    background-color: var(--p-green-100);
+  }
+
+  ::ng-deep .p-button-icon.fa-solid.fa-star {
+    padding: 0;
+    margin: 0 -4px;
+    color: rgb(240, 190, 64) !important; /* Star icon color */
+  }
+
+  :host-context(.dark) .githubBtn {
+    &.hero {
+      border-color: var(--p-green-900);
+    }
+
+    &.hero:hover {
+      background-color: var(--p-green-950);
+    }
+
+    ::ng-deep .p-button-icon.fa-solid.fa-star {
+      color: gold !important; /* Star icon color */
+    }
+  }
+}

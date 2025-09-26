@@ -1,25 +1,44 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Header } from './components/header/header';
+import { Component, OnInit, signal } from '@angular/core';
+import {
+  RouteConfigLoadEnd,
+  RouteConfigLoadStart,
+  Router,
+  RouterOutlet,
+} from '@angular/router';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { NgxFadeComponent } from '@omnedia/ngx-fade';
+
+import { Header } from '@layout/header/header';
+import { Footer } from '@layout/footer/footer';
+import { MainLoader } from '@components/main-loader/main-loader';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header],
-  template: `
-    <main>
-      <app-header />
-      <router-outlet />
-    </main>
-  `,
-  styles: [
-    `
-      main {
-        padding: 15px;
-       display: flex; 
-    flex-direction: column; 
-      }
-    `,
+  imports: [
+    RouterOutlet,
+    Header,
+    ProgressSpinnerModule,
+    MainLoader,
+    Footer,
+    NgxFadeComponent,
   ],
+  templateUrl: './app.html',
+  styleUrls: ['./app.scss'],
 })
-export class App {
-  protected title = 'qr-pal';
+export class App implements OnInit {
+  protected readonly loadingRouteConfig = signal(false);
+
+  constructor(private router: Router) {}
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof RouteConfigLoadStart) {
+        this.loadingRouteConfig.set(true);
+        console.log('Loading route configuration...');
+      } else if (event instanceof RouteConfigLoadEnd) {
+        this.loadingRouteConfig.set(false);
+        console.log('Finished loading route configuration.');
+      }
+    });
+  }
 }

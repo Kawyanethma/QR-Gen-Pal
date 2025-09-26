@@ -1,0 +1,126 @@
+// Hero section styles
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.p-tag {
+  font-size: smaller;
+  padding: 2px 5px;
+}
+
+.hero {
+  width: 65%;
+  
+  // Typography
+  h1 {
+    font-family: "Bitcount Grid Double", system-ui;
+    font-size: 3rem;
+    color: var(--p-gray-800);
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--p-gray-600);
+    margin-top: 0;
+  }
+  
+  // Action elements
+  .hero-btns {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  // Platform section
+  .hero-platforms {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    color: var(--p-gray-400);
+    
+    i {
+      font-size: 15px;
+      margin-right: 0.3rem;
+    }
+    
+    .fa-microsoft {
+      font-size: 14.5px;
+      color: #5a8dfcff;
+    }
+    
+    p {
+      font-size: 12px;
+      margin-top: 0;
+      color: var(--p-gray-400);
+    }
+  }
+  
+  // Responsive adjustments
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    
+    h1 {
+      font-size: 2.1rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    width: 85%;
+    
+    h1 {
+      font-size: 2.2rem;
+    }
+    
+    p {
+      font-size: 15px;
+    }
+  }
+  
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+    width: 60%;
+    
+    h1 {
+      font-size: 2.4rem;
+    }
+    
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+// Dark theme adjustments
+:host-context(.dark) .hero {
+  h1 {
+    color: var(--p-gray-100);
+  }
+  
+  p {
+    color: var(--p-gray-300);
+  }
+  
+  .hero-platforms {
+    color: var(--p-gray-500);
+    
+    p {
+      color: var(--p-gray-500);
+    }
+  }
+}

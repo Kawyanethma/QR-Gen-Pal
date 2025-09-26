@@ -29,7 +29,7 @@ const ColorPreset =  definePreset(Aura, {
                     focusBackground: '{lime.700}',
                     color: '#ffffff',
                     focusColor: '#ffffff'
-                }
+                },
                
             },
             dark: {
