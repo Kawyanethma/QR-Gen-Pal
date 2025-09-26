@@ -1,9 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap");
-
 main {
   padding: 15px;
   display: flex;
   flex-direction: column;
+  background: radial-gradient(
+    125% 125% at 50% 90%,
+    #ffffff 40%,
+    #aff7c7ff 100%
+  );
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
-
+:host-context(.dark) main {
+  background: radial-gradient(125% 125% at 50% 90%, #000000 40%, #072607 100%);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}

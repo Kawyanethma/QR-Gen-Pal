@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import {
   RouteConfigLoadEnd,
   RouteConfigLoadStart,
@@ -25,7 +25,7 @@ import { MainLoader } from '@components/main-loader/main-loader';
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })
-export class App implements OnInit {
+export class App {
   protected readonly loadingRouteConfig = signal(false);
 
   constructor(private router: Router) {}
