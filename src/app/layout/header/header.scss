@@ -11,8 +11,9 @@
   background: rgba(255, 255, 255, 0.14);
   border-radius: 25px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(11.9px);
+  backdrop-filter: blur(1555.9px);
   -webkit-backdrop-filter: blur(11.9px);
+  z-index: 1000;
 }
 
 /* Dark mode styles */

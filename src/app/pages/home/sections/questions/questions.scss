@@ -12,6 +12,11 @@
     font-family: "Bitcount Grid Double", system-ui;
   }
 
+  .p-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+
   .question {
     text-align: left;
     max-width: 800px;
@@ -21,17 +26,18 @@
   .answer {
     text-align: left;
     max-width: 800px;
+    font-weight: 500;
     color: var(--p-gray-600);
   }
 }
 
 @media screen and (max-width: 768px) {
   .questions-header {
-    font-size: 2.1rem;
+    font-size: 2rem;
   }
 
   .question {
-    font-size: medium;
+    font-size: small;
   }
 
   .answer {
@@ -49,7 +55,7 @@
   }
 
   .answer {
-    font-size: small;
+    font-size: medium;
   }
 }
 
@@ -59,7 +65,7 @@
   }
 
   .question {
-    font-size: large;
+    font-size: medium;
   }
 
   .answer {
@@ -73,16 +79,10 @@
   }
 
   .question {
-    text-align: left;
-    max-width: 800px;
-    font-size: large;
     color: var(--p-gray-300);
   }
 
   .answer {
-    text-align: left;
-    max-width: 800px;
-    font-size: medium;
     color: var(--p-gray-400);
   }
 }
