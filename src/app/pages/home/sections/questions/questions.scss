@@ -1,0 +1,88 @@
+.questions-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .questions-header {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+    color: var(--p-green-400);
+    font-family: "Bitcount Grid Double", system-ui;
+  }
+
+  .question {
+    text-align: left;
+    max-width: 800px;
+    color: var(--p-gray-700);
+  }
+
+  .answer {
+    text-align: left;
+    max-width: 800px;
+    color: var(--p-gray-600);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .questions-header {
+    font-size: 2.1rem;
+  }
+
+  .question {
+    font-size: medium;
+  }
+
+  .answer {
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .questions-header {
+    font-size: 2.2rem;
+  }
+
+  .question {
+    font-size: medium;
+  }
+
+  .answer {
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  .questions-header {
+    font-size: 2.4rem;
+  }
+
+  .question {
+    font-size: large;
+  }
+
+  .answer {
+    font-size: medium;
+  }
+}
+
+:host-context(.dark) .questions-container {
+  .questions-header {
+    color: var(--p-green-700);
+  }
+
+  .question {
+    text-align: left;
+    max-width: 800px;
+    font-size: large;
+    color: var(--p-gray-300);
+  }
+
+  .answer {
+    text-align: left;
+    max-width: 800px;
+    font-size: medium;
+    color: var(--p-gray-400);
+  }
+}

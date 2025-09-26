@@ -1,8 +1,11 @@
 @if (!loadingRouteConfig()) {
 <main>
-  <app-header />
-  <router-outlet />
-  <app-footer />
+  <om-fade [animateOnlyOnce]="true">
+    <app-header />
+    <router-outlet />
+    <app-footer />
+  </om-fade>
+  >
 </main>
 } @else {
 <app-main-loader />

@@ -6,6 +6,7 @@ import {
   RouterOutlet,
 } from '@angular/router';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { NgxFadeComponent } from '@omnedia/ngx-fade';
 
 import { Header } from '@layout/header/header';
 import { Footer } from '@layout/footer/footer';
@@ -13,7 +14,14 @@ import { MainLoader } from '@components/main-loader/main-loader';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, ProgressSpinnerModule, MainLoader, Footer],
+  imports: [
+    RouterOutlet,
+    Header,
+    ProgressSpinnerModule,
+    MainLoader,
+    Footer,
+    NgxFadeComponent,
+  ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
 })
