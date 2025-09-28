@@ -1,0 +1,46 @@
+<p-card class="qr-card">
+  <div #canvas class="qr-canvas"></div>
+  <ng-template #footer>
+    <div class="download-section">
+      <label for="resolution" class="resolutionLabel"
+        >Resolution
+        <p-slider
+          (onChange)="onChangeResolution($event)"
+          class="slider"
+          [min]="300"
+          [max]="1200"
+        />
+        <div class="resolutionValues">
+          <div class="label">Low</div>
+          <div>{{ resolution  }}x{{ resolution }}px</div>
+          <div class="label">High</div>
+        </div>
+      </label>
+      <p-selectbutton
+        class="extensionSelect"
+        [options]="allExtensions"
+        [(ngModel)]="extension"
+        fluid="true"
+        optionLabel="label"
+        optionValue="value"
+        aria-labelledby="basic"
+      />
+      <button
+        pButton
+        label="Download"
+        class="downloadBtn"
+        (click)="download()"
+      ></button>
+
+      <button
+        pButton
+        label="Reset"
+        severity="secondary"
+        class="resetBtn"
+        severity="danger"
+        [outlined]="true"
+      ></button>
+    </div>
+  </ng-template>
+</p-card>
+

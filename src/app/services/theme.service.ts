@@ -29,8 +29,8 @@ export class ThemeService {
         const newTheme = event.matches ? 'dark' : 'light';
         this.theme.set(newTheme);
         this.applyTheme(newTheme);
-        }
-      });
+      }
+    });
   }
 
   toggleTheme(): void {
@@ -38,6 +38,10 @@ export class ThemeService {
     localStorage.setItem('theme', newTheme);
     this.theme.set(newTheme);
     this.applyTheme(newTheme);
+  }
+
+  get currentTheme(): 'dark' | 'light' {
+    return this.theme();
   }
 
   private applyTheme(theme: 'dark' | 'light'): void {
